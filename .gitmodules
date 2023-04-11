@@ -1,0 +1,3 @@
+[submodule "QuadConv_AE/PyTorch-QuadConv"]
+	path = QuadConv_AE/PyTorch-QuadConv
+	url = https://github.com/AlgorithmicDataReduction/PyTorch-QuadConv.git
