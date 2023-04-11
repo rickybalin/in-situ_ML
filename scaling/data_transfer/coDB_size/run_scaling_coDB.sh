@@ -10,7 +10,7 @@ echo
 DB_TYPE="co"
 for TEST_TYPE in "coDB_size"
 do
-   for DB_BACKEND in "redis" "keydb"
+   for DB_BACKEND in "keydb"
    do
       for (( N=1; N<=32; N=N*2 ))
       do 

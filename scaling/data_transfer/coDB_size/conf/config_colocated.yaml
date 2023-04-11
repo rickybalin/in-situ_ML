@@ -59,7 +59,7 @@ model:
 
 # Simulation config
 sim:
-    executable: "/grand/datascience/balin/SC23/SmartSim/scaling/data_transfer/single_node/coDB_size/safe/src/clientFtn.exe"
+    executable: "../src/clientFtn.exe"
     # Device for simulation: cuda, cpu
     device: "cpu"
 
