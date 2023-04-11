@@ -1,0 +1,12 @@
+# Installation Directories #
+############################
+installation/ssim
+installation/SmartSim
+installation/SmartRedis
+installation/horovod
+installation/keydb
+installation/stdlib
+
+# Byte-compiled / optimized / DLL files #
+#########################################
+*/__pycache__/

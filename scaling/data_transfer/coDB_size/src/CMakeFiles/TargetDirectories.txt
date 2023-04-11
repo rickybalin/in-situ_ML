@@ -1,0 +1,3 @@
+/lus/grand/projects/datascience/balin/SC23/in-situ_ML/src/data_transfer/coDB_size/src/CMakeFiles/clientFtn.exe.dir
+/lus/grand/projects/datascience/balin/SC23/in-situ_ML/src/data_transfer/coDB_size/src/CMakeFiles/edit_cache.dir
+/lus/grand/projects/datascience/balin/SC23/in-situ_ML/src/data_transfer/coDB_size/src/CMakeFiles/rebuild_cache.dir

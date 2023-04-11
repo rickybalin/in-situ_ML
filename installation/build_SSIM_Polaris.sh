@@ -124,10 +124,12 @@ cd ..
 pip install hydra-core --upgrade
 
 ## Clone SC23 paper repo and install PyTorch-QuadConv package
-cd ../
-git submodule update --init --recursive
-cd PyTorch_AE/PyTorch-QuadConv
+#cd ../
+#git submodule update --init --recursive
+#cd PyTorch_AE/PyTorch-QuadConv
+#pip install .
+#cd ../..
+cd /lus/grand/projects/datascience/balin/SC23/inSitu-QCNN/PyTorch-QuadConv
 pip install .
-cd ../..
-
+cd -
 
