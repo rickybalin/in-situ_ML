@@ -12,8 +12,7 @@ echo
 ## Loop over cases for the colocated database
 ## to extract and concatenate data
 DB_TYPE="co"
-NY_MAX=$(( 64*256 ))
-for TEST_TYPE in "strong"
+for TEST_TYPE in "weak" "strong"
 do
    for DB_BACKEND in "redis"
    do
@@ -51,6 +50,5 @@ do
    done
 done
 
-
 ## Launch Python script to post-process results and create figure
-python plot_strong_scale.py
+python plot_inference_scale.py

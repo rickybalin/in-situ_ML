@@ -10,3 +10,7 @@ installation/stdlib
 # Byte-compiled / optimized / DLL files #
 #########################################
 __pycache__/
+
+# ML Models #
+#############
+*.pt

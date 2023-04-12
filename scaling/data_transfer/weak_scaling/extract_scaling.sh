@@ -1,4 +1,7 @@
-#!/bin/bash 
+#!/bin/bash -e
+
+module load conda/2022-09-08
+conda activate /lus/grand/projects/datascience/balin/SC23/in-situ_ML/installation/ssim
 
 RUN_DIR=$PWD
 SAFE_DIR=$RUN_DIR
@@ -7,8 +10,8 @@ echo and grabbing sample files from $SAFE_DIR
 echo 
 
 ## Loop over cases for the colocated database
+## to extract and concatenate data
 DB_TYPE="co"
-NY_MAX=$(( 64*256 ))
 for TEST_TYPE in "weak"
 do
    for DB_BACKEND in "redis" "keydb"
