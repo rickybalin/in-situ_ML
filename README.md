@@ -26,11 +26,43 @@ conda activate /path/to/installation_directory/ssim
 
 
 ## Souce Code Description
+The source code used for the various scaling tests presented in Section 3 of the paper are contained in the [scaling directory](./scaling).
+Each scaling test contains directory called `src` which holds the code for the Fotran reproducer and the SmartSim driver script.
+The `src` directories also contain bash scripts to setup the build environment on Polaris, configure the build and compile the code.
+
+For example, to build the code used for the in situ inference weak and strong scaling tests (Figure 8 in the paper), execute the following steps:
+- Change directory to the `src` directory for this test with `cd scaling/inference/scaling/src`
+- Set the environment on a Polaris login node with `source env.sh`
+- Configure and build the executable with `./doConfig.sh`. Note that this script links to the SmartRedis library built during the software installation step and assumes the directory structure set up in this repository.
+- You can clean the build directory executing `./clean.sh`
 
 
 ## Launching the Artifacts and Processing Output Data
+For each of the scaling tests in [scaling directory](./scaling) and Section 3 of the paper, this repository also contains the run, submit and post-ptocessing scripts used to generate the results and plots presented. Note these scripts include details specific to Polaris.
+
+In the case of the single node tests exploring the impact of the co-located database size, the size of the data, and differences in performance between the proposed framework and LibTorch, the runs can be executed as follows:
+- Change directory to the particular test, for example `cd scaling/data_transfer/coDB_size`
+- Submit an interactive job to get a compute node with `./subInteractive.sh`. Note one will have to select an appropriate account name to run on Polaris. Additionally, note that for the test exploring the data size with a clustered database deployment, two nodes must be requested.
+- Run the battery of tests with `./run_scaling.sh`. This can be run multiple times to gather data for different nodes and instances.
+- Extract the data and plot it with `./extract_scaling.sh`. This produces a figure in `.png` format in the test directory.
+
+In the other cases, which require submitting jobs to run on multiple nodes, the runs can be executed as follows:
+- Change directory to the particular test, for example `cd scaling/data_transfer/weak_scaling`
+- Launch the battery of tests with `./launch_scaling_coDB.sh` or `./launch_scaling_clDB.sh` for the co-located or clustered deployment of the database, respectively. These jobs are submitted to the queue and therefore will take some time to execute. Note one will have to select an appropriate account name to run on Polaris and this can be run multiple times to gather data for different instances.
+- Extract the data and plot it with `./extract_scaling.sh`. This produces a figure in `.png` format in the test directory.
 
 
 ## The QuadConv Autoencoeder Model
+This repository also contains the QuadConv autoencoder used in Section 4 of the paper to perform in situ training from live simulation data. 
+The model is included in the form of both [core files](./QuadConv_AE/core) and the [PyTorch-QuadConv submodule](./QuadConv_AE/PyTorch-QuadConv). 
+The submodule can be cloned with the following command:
+```
+git submodule update --init --recursive
+```
+and new updates can be pulled using `git pull` from within that directory.
 
+To install the PyTorch-QuadConv package, run the following command from within the submodule directory:
+```
+pip install .
+```
 
