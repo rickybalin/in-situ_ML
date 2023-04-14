@@ -130,7 +130,4 @@ pip install matplotlib
 #cd PyTorch_AE/PyTorch-QuadConv
 #pip install .
 #cd ../..
-cd /lus/grand/projects/datascience/balin/SC23/inSitu-QCNN/PyTorch-QuadConv
-pip install .
-cd -
 

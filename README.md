@@ -17,7 +17,7 @@ Then, from the [installation directory](./installation), run the build script wi
 source build_SSIM_Polaris.sh
 ```
 to create a new Conda environment with all the dependencies needed by the framework.
-This operation takes approximately 10 minutes to complete.
+This operation takes approximately 20 minutes to complete.
 
 You can load the Conda environment with 
 ```
@@ -51,18 +51,4 @@ In the other cases, which require submitting jobs to run on multiple nodes, the 
 - Launch the battery of tests with `./launch_scaling_coDB.sh` or `./launch_scaling_clDB.sh` for the co-located or clustered deployment of the database, respectively. These jobs are submitted to the queue and therefore will take some time to execute. Note one will have to select an appropriate account name to run on Polaris and this can be run multiple times to gather data for different instances.
 - Extract the data and plot it with `./extract_scaling.sh`. This produces a figure in `.png` format in the test directory.
 
-
-## The QuadConv Autoencoeder Model
-This repository also contains the QuadConv autoencoder used in Section 4 of the paper to perform in situ training from live simulation data. 
-The model is included in the form of both [core files](./QuadConv_AE/core) and the [PyTorch-QuadConv submodule](./QuadConv_AE/PyTorch-QuadConv). 
-The submodule can be cloned with the following command:
-```
-git submodule update --init --recursive
-```
-and new updates can be pulled using `git pull` from within that directory.
-
-To install the PyTorch-QuadConv package, run the following command from within the submodule directory:
-```
-pip install .
-```
 
