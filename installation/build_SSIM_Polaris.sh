@@ -122,12 +122,12 @@ cd ..
 
 ## Install any other packages
 pip install hydra-core --upgrade
+pip install matplotlib
 
 ## Clone SC23 paper repo and install PyTorch-QuadConv package
-cd ../
-git submodule update --init --recursive
-cd PyTorch_AE/PyTorch-QuadConv
-pip install .
-cd ../..
-
+#cd ../
+#git submodule update --init --recursive
+#cd PyTorch_AE/PyTorch-QuadConv
+#pip install .
+#cd ../..
 
