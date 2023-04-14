@@ -25,7 +25,7 @@ conda activate /path/to/installation_directory/ssim
 ```
 
 
-## Souce Code Description
+## Source Code Description
 The source code used for the various scaling tests presented in Section 3 of the paper are contained in the [scaling directory](./scaling).
 Each scaling test contains directory called `src` which holds the code for the Fotran reproducer and the SmartSim driver script.
 The `src` directories also contain bash scripts to setup the build environment on Polaris, configure the build and compile the code.
