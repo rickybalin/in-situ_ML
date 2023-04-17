@@ -11,7 +11,7 @@ source env.sh
 ./doConfig.sh
 ```
 
-Note that the `doConfig.sh` script points to the SmartRedis library at the relative path `../../../../installation/SmartRedis`, therefore assumes that the software stack for these experiments was installed according to the [README](../../../../README.md) instructions. The same is true for the `env.sh` script. Both scripts need to be updated if the Conda env is installed in another directory.
+Note that the `doConfig.sh` script points to the SmartRedis library at the relative path `../../../../installation/SmartRedis`, therefore assumes that the software stack for these experiments was installed according to the [README](../../../README.md) instructions. The same is true for the `env.sh` script. Both scripts need to be updated if the Conda env is installed in another directory.
 
 ## Run the experiment
 First, submit an interactive job to get a compute node on Polaris. This is done by executing
@@ -25,7 +25,7 @@ First, submit an interactive job to get a compute node on Polaris. This is done 
  ./run_scaling.sh
  ```
  This bash script creates and configures a new directory for each run of the experiment and executes the run by launching `run_polaris.sh` within these directories.
- Note that the `run_polaris.sh` script assumes the Conda env was installed according to the instructions in the [README](../../../../README.md) file.
+ Note that the `run_polaris.sh` script assumes the Conda env was installed according to the instructions in the [README](../../../README.md) file.
  The output of each run is contained in the `data_transfer.log` file and is located in a directory with the name of the job ID within each of the run directories. 
  The output consists of the time, measured in seconds, taken to perform the data send and retrieve operations by each rank on each loop iteration.
  
