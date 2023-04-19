@@ -19,7 +19,7 @@ To do so, execute the bash script
 ```
 ./launch_scaling_coDB.sh
 ```
- which will configure the run and submit a job. Note that the project name in the `submit_polaris.sh` script must be changed to a valid allocation and that the `run_polaris.sh` script assumes the Conda env was installed according to the instructions in the [README](../../../README.md) file.
+ which will configure the run and submit a job. Note that the project name in the `submit_polaris.sh` script must be changed to a valid allocation and that the script assumes the Conda env was installed according to the instructions in the [README](../../../README.md) file.
  The output of each run is contained in the `data_transfer.log` file and is located in a directory with the name of the job ID within each of the run directories. 
  The output consists of the time, measured in seconds, taken to perform the data send and retrieve operations by each rank on each loop iteration.
  
