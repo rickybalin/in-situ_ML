@@ -1,4 +1,4 @@
-# Weak Scaling of Send/Retrieve Operations
+# Weak and Strong Scaling of Inference with SmartSim
 This artifact reproduces Figure 8 in the paper.
 
 
