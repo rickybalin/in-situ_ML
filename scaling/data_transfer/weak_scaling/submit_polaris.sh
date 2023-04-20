@@ -3,16 +3,16 @@
 #PBS -N ssim_scaling
 #PBS -l walltime=00:45:00
 #PBS -l select=NODES_REPLACE:ncpus=64:ngpus=4
-#PBS -l filesystems=grand:home
+#PBS -l filesystems=grand:home:eagle
 #PBS -k doe
 #PBS -j oe
-#PBS -A datascience
+#PBS -A PROJECT_NAME
 #PBS -q QUEUE_REPLACE
 #PBS -V
 
 DRIVER=./driver.py
 MODULE=conda/2022-09-08
-CONDA_ENV=/lus/grand/projects/datascience/balin/SC23/in-situ_ML/installation/ssim
+CONDA_ENV=../../../../installation/ssim
 LOGGING="verbose-perf"
 
 # Set env

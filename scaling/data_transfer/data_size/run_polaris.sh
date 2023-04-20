@@ -2,7 +2,7 @@
 
 DRIVER=./driver.py
 MODULE=conda/2022-09-08
-CONDA_ENV=/grand/datascience/balin/SC23/SmartSim/env/ssim
+CONDA_ENV=../../../../installation/ssim
 LOGGING="verbose-perf"
 
 # Set env

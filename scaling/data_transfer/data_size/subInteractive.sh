@@ -1,7 +1,7 @@
 #!/bin/bash
 
 runtime=01:00:00
-project=datascience
+project=PROJECT_NAME
 queue=debug
 #queue=debug-scaling
 #queue=preemptable
