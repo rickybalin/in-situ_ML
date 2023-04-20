@@ -18,6 +18,3 @@ cmake \
 
 make
 
-
-#-DCMAKE_PREFIX_PATH=`python -c 'import torch;print(torch.utils.cmake_prefix_path)'` \
-#-DCMAKE_PREFIX_PATH=/soft/datascience/conda/2022-09-08/mconda3/lib/python3.8/site-packages/torch/share/cmake \
